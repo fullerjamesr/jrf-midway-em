@@ -19,7 +19,12 @@ export LIBRARY_PATH=$MYDIR/lib:$LIBRARY_PATH
 
 
 # Relion specific
-export RELION_QSUB_TEMPLATE=$MYDIR/scripts/relion_sbatch_template.sbatch
+if [ "$1" = "gpu" ]
+then
+	export export RELION_QSUB_TEMPLATE=$MYDIR/scripts/relion_sbatch_gpu_template.sbatch
+else
+	export RELION_QSUB_TEMPLATE=$MYDIR/scripts/relion_sbatch_template.sbatch
+fi
 export RELION_QSUB_EXTRA1="RAM per thread (MB)"
 export RELION_QSUB_EXTRA1_DEFAULT=2000
 export RELION_QSUB_EXTRA2="Time (hr:min:sec)"
