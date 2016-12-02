@@ -8,8 +8,8 @@
 # Job resources
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:XXXqueueXXX
-#SBATCH --nodes=XXXnodesXXX
-#SBATCH --ntasks-per-node=XXXmpinodesXXX
+#SBATCH --ntasks=XXXmpinodesXXX
+#SBATCH --ntasks-per-node=XXXqueueXXX
 #SBATCH --cpus-per-task=XXXthreadsXXX
 
 # Need to set these environment vars.

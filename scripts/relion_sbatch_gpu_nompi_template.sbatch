@@ -6,8 +6,10 @@
 #SBATCH --error=XXXnameXXX.err
 
 # Job resources
-#SBATCH --partition=XXXqueueXXX
-#SBATCH --ntasks=XXXmpinodesXXX
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:XXXqueueXXX
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=XXXthreadsXXX
 
 # Need to set these environment vars.
@@ -16,12 +18,10 @@
 #SBATCH --mem-per-cpu=XXXextra1XXX
 #SBATCH --time=XXXextra2XXX
 
-#SBATCH --constraint=ib
-
 export OMP_NUM_THREADS=XXXthreadsXXX
 
 # Add my programs to paths
 source ~/jrf-midway-em/setup.sh
 
-mpiexec XXXcommandXXX
+XXXcommandXXX
 

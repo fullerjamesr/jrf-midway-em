@@ -7,7 +7,8 @@
 
 # Job resources
 #SBATCH --partition=XXXqueueXXX
-#SBATCH --ntasks=XXXmpinodesXXX
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=XXXthreadsXXX
 
 # Need to set these environment vars.
