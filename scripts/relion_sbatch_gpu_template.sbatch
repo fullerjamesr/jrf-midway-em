@@ -8,6 +8,7 @@
 # Job resources
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:XXXqueueXXX
+#SBATCH --constraint=k20m|k40m
 #SBATCH --ntasks=XXXmpinodesXXX
 #SBATCH --ntasks-per-node=XXXqueueXXX
 #SBATCH --cpus-per-task=XXXthreadsXXX
