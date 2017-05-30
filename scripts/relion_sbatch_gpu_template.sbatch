@@ -19,8 +19,6 @@
 #SBATCH --mem-per-cpu=XXXextra1XXX
 #SBATCH --time=XXXextra2XXX
 
-#SBATCH --constraint=ib
-
 export OMP_NUM_THREADS=XXXthreadsXXX
 
 # Add my programs to paths
